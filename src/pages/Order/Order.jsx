@@ -55,8 +55,14 @@ export default function Orders() {
   }
 
   if (!orders || orders.length === 0) {
-    return <div className="p-6 text-center">You have no orders.</div>;
-  }
+  return (
+    <div className="p-10 my-40 text-center text-gray-600">
+      <p className="text-lg font-semibold mb-2">📭 No orders yet</p>
+      <p className="text-sm">Looks like you haven’t placed any orders.</p>
+    </div>
+  );
+}
+
 
   return (
     <div className="p-6 my-15 max-w-5xl mx-auto">
